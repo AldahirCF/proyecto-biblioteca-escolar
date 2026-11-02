@@ -2,12 +2,13 @@
 
 biblioteca.Add(new Titulo("Don Quijote de la Mancha","S_01V1",5,0));
 biblioteca.Add(new Titulo("Cien años de soledad","RM01V1",7,1));
+biblioteca.Add(new Titulo("La Odisea","PE01V1",7,5));
 biblioteca.Add(new Titulo("Orgullo y prejuicio","Ro01V1",9,3));
 biblioteca.Add(new Titulo("El señor de los anillos","AF01V1",1,5));
 biblioteca.Add(new Titulo("Crimen y castigo","P_01V1",2,8));
 biblioteca.Add(new Titulo("Frankenstein","CF01V1",4,5));
 biblioteca.Add(new Titulo("Moby Dick","EM01V1",7,2));
-biblioteca.Add(new Titulo("La Odisea","PE01V1",7,5));
+
 
 foreach(Titulo titulo in biblioteca)
 {
@@ -42,4 +43,12 @@ foreach(Titulo titulo in biblioteca2)
 {
    Console.WriteLine($"El titulo {titulo.Nombre}, tiene {titulo.Cantidad} ejemplares");
    Console.WriteLine();
+}
+
+biblioteca.Add(new Titulo("El mago de oz libro","NI01V1",7,5));
+Procesos.OrdenamientoInsersion(biblioteca);
+
+foreach(Titulo titulo in biblioteca)
+{
+   Console.WriteLine($"El titulo {titulo.Nombre}, tiene {titulo.HistorialP} de prestamos hechos");
 }

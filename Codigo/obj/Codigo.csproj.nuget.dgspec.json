@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\Codigo\\Codigo.csproj": {}
+    "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\codigo\\Codigo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\Codigo\\Codigo.csproj": {
+    "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\codigo\\Codigo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\Codigo\\Codigo.csproj",
+        "projectUniqueName": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\codigo\\Codigo.csproj",
         "projectName": "Codigo",
-        "projectPath": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\Codigo\\Codigo.csproj",
+        "projectPath": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\codigo\\Codigo.csproj",
         "packagesPath": "C:\\Users\\aldah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\Codigo\\obj\\",
+        "outputPath": "C:\\Users\\aldah\\OneDrive\\Desktop\\El mejor proyecto 1\\proyecto-biblioteca-escolar\\codigo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
