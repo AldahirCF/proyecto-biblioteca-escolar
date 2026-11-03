@@ -52,3 +52,47 @@ foreach(Titulo titulo in biblioteca)
 {
    Console.WriteLine($"El titulo {titulo.Nombre}, tiene {titulo.HistorialP} de prestamos hechos");
 }
+
+Titulo Libro = Procesos.BusquedaBinariaISBN(biblioteca, "S_01V1");
+
+if (Libro != null)
+{
+   Console.WriteLine($"El titulo {Libro.Nombre}, con ID {Libro.ID}");
+}
+else
+{
+   Console.WriteLine("Titulo No encontrado");
+}
+
+Libro = Procesos.BusquedaBinariaISBN(biblioteca, "PP01V1"); //No existe
+
+if (Libro != null)
+{
+   Console.WriteLine($"El titulo {Libro.Nombre}, con ID {Libro.ID}");
+}
+else
+{
+   Console.WriteLine("Titulo No encontrado");
+}
+
+Libro = Procesos.BusquedaSecuencial(biblioteca, "El mago de oz libro");
+
+if (Libro != null)
+{
+   Console.WriteLine($"El titulo {Libro.Nombre}, con ID {Libro.ID}");
+}
+else
+{
+   Console.WriteLine("Titulo No encontrado");
+}
+
+Libro = Procesos.BusquedaSecuencial(biblioteca, "Caperusita roja"); //No existe
+
+if (Libro != null)
+{
+   Console.WriteLine($"El titulo {Libro.Nombre}, con ID {Libro.ID}");
+}
+else
+{
+   Console.WriteLine("Titulo No encontrado");
+}
