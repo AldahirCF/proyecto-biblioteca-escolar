@@ -27,11 +27,12 @@ do
     Console.WriteLine("1: Seleccionar por nombre");
     Console.WriteLine("2: Seleccionar por ID ");
     Console.WriteLine("3: Agregar libro");
-    Console.WriteLine("4: Salir");
+    Console.WriteLine("4: Comparacion (Prueba)");
+    Console.WriteLine("5: Salir");
 
    Resultado = Console.ReadLine();
    Console.Clear();
-}while(Resultado != "1" && Resultado != "2" && Resultado != "3" && Resultado != "4");
+}while(Resultado != "1" && Resultado != "2" && Resultado != "3" && Resultado != "4" && Resultado != "5");
 
 foreach(Titulo titulo in biblioteca)
 {
@@ -90,11 +91,30 @@ switch (Resultado)
       
    break;
    case "4":
+      Console.WriteLine("Introducir el ID del libro:");
+      ID = Console.ReadLine();
+      List<Titulo> CopiaBiblioteca = Procesos.OrdenamientoporID(biblioteca);
+      string[] IDs = CopiaBiblioteca.Select(titulo => titulo.ID).ToArray();
+
+      Libro = Procesos.BusquedaBinariaISBNPrueba(biblioteca, ID, out int comparaciones);
+        NComparacion Comparar = new NComparacion();
+        int NumeroLibro = Array.BinarySearch(IDs, ID, Comparar);
+
+        Console.WriteLine($"Búsqueda propia: {(Libro != null ? $"Libro: {Libro.Nombre}, de ID {Libro.ID}" : "No encontrado")}");
+
+        Console.WriteLine($"Array.BinarySearch: {(NumeroLibro >= 0 ? $"Libro: {CopiaBiblioteca[NumeroLibro].Nombre}, de ID {CopiaBiblioteca[NumeroLibro].ID}" : "No encontrado")}");
+
+        Console.WriteLine($"Mientras que mi metodo hace {comparaciones} y el metodo de C# hace {Comparar.Comparaciones}");
+
+        Console.ReadKey();
+
+   break;
+   case "5":
       Salir = true;
    break;
 }
 
-   if (Libro != null)
+   if (Libro != null && Resultado != "4")
    {
       do
       {   

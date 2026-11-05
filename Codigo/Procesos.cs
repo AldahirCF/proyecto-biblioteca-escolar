@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 public static class Procesos
 {
    public static bool  disponibilidad(Titulo titulo)
@@ -79,10 +77,43 @@ public static class Procesos
 
       int inicio = 0;
       int fin = CopiaBiblioteca.Count - 1;
+      while(inicio <= fin)
+      {
+         int medio = inicio + (fin - inicio) / 2;
+
+
+         int comparacion = string.Compare(CopiaBiblioteca[medio].ID, ISBN, StringComparison.Ordinal);
+
+
+         if(comparacion == 0)
+         {
+            return CopiaBiblioteca[medio];
+         }
+         else if (comparacion < 0)
+         {
+            inicio = medio + 1;
+         }
+         else
+         {
+            fin = medio - 1;
+         }
+      }
+      return null;
+   }
+
+   public static Titulo BusquedaBinariaISBNPrueba (List<Titulo> Catalogo, string ISBN,  out int comparaciones)
+   {
+      List<Titulo> CopiaBiblioteca = OrdenamientoporID(Catalogo);
+
+      int inicio = 0;
+      int fin = CopiaBiblioteca.Count - 1;
+      comparaciones = 0;
 
       while(inicio <= fin)
       {
          int medio = inicio + (fin - inicio) / 2;
+
+         comparaciones++;
 
          int comparacion = string.Compare(CopiaBiblioteca[medio].ID, ISBN, StringComparison.Ordinal);
 
